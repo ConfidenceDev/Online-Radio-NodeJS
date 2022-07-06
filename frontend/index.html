@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1NHJ2G8Z9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L1NHJ2G8Z9');
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Vebbo is a free community podcast forum, share your thoughts and opinions"
+    />
+    <meta name="keywords" content="vebbo, vebbo.me, forum, group, radio, podcast" />
+    <meta name="author" content="Vebbo inc." />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="./css/media.css" />
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <title>Vebbo | Community</title>
+  </head>
+  <body>
+    <section class="main container">
+      <div class="left">
+        <a href="index.html"><label>Vebbo</label></a>
+        <p>
+          Vebbo is a social community podcast forum to share your thoughts and opinions
+          <br />
+          <br />
+          Guide: Use the mic button to mute and unmute audio broadcast
+          <br />
+          <br />
+          Recommended browsers: Latest version of Chrome, Opera Mini, Firefox and Safari
+        </p>
+      </div>
+      <div class="mid">
+        <div class="mid_top">
+          <label class="count" id="count">...</label>
+          <div class="shape"></div>
+          <a href="#edit_account" class="profile_btn"><img src="./assets/icons/circle.png" id="profile_img_btn"/></a>
+        </div>
+        <div class="mid_mid">
+          <img
+            src="./assets/icons/circle.png"
+            id="streamer_profile_btn"
+          />
+          <label id="prompt_count" class="prompt_count">00:00</label>
+          <canvas id="wave"></canvas>
+          <button id="stream_btn" class="stream_btn">Stream</button>
+        </div>
+        <div class="mid_bottom">
+          <ul class="message_list" id="message_list">
+            <li></li>
+          </ul>
+          <div class="message_field">
+            <input
+              type="text"
+              class="message_input"
+              id="message_input"
+              autocomplete="off"
+              placeholder="Write..."
+            />
+            <img src="./assets/icons/send.png" class="send_btn" id="send_btn"/>
+            <img src="./assets/icons/mic.png" alt="mute" class="mute_btn" id="mute_btn" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <p class="about">
+          Vebbo is a social community forum to share your thoughts and opinions
+          <br />
+          <br />
+          Guide: Use the mic button to mute and unmute audio broadcast
+        </p>
+        <h2>Connect</h2>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/onisofien.dev" target="_blank">
+              <img src="./assets/instagram.png"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/OnisofienGeek" target="_blank">
+              <img src="./assets/twitter.png"
+            /></a>
+          </li>
+          <li>
+            <a href="mailto:stackdriveinc@gmail.com" target="_blank">
+              <img src="./assets/gmail.png" class="mail_img_btn"
+            /></a>
+          </li>
+        </ul>
+        <a href="policy.html" target="_blank"><h3 class="terms">Terms &amp; Policy</h3></a>
+        <h3 class="copyright">
+          Vebbo inc &#169; 2020 copyright all rights reserved
+        </h3>
+      </div>
+    </section>
+
+    <div id="popup_msg" class="overlay">
+      <div class="popup">
+        <h2>Alert</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="details">
+          <p id="pop_msg"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup_timer" class="overlay">
+      <div class="popup">
+        <h2>Start Stream</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="details">
+          <div class="timer_container" id="timer_container">
+            <div class="timer_selection">
+              <div>
+                <label>5 min</label>
+              </div>
+            </div>
+            <div class="timer_selection">
+              <div class="time_locked"><label>10 min</label>
+                <img src="./assets/icons/lock.png"></div>
+            </div>
+            <div class="timer_selection">
+              <div class="time_locked"><label>20 min</label>
+                <img src="./assets/icons/lock.png"></div>
+            </div>
+            <div class="timer_selection">
+              <div class="time_locked"><label>30 min</label>
+                <img src="./assets/icons/lock.png"></div>
+            </div>
+        </div>
+          <input
+          type="email"
+          id="email_field"
+          class="inputs"
+          placeholder="Email"
+        />
+          <h3>Fee: <span id="amt"></span></h3>
+          <h3>By streaming you agree to our <a href="policy.html" target="_blank"><b>terms of service</b></a></h3>
+          <button id="begin_btn" class="popup_buttons">Begin</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="edit_account" class="overlay">
+      <div class="popup">
+        <h2>Edit Profile</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="details">
+          <div class="top">
+            <div class="top_container" id="top_container">
+              <img src="./assets/icons/mood_1.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_2.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_3.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_4.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_5.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_6.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_7.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_8.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_9.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_10.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_11.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_12.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_13.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_14.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_15.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_16.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_17.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_18.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_19.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_20.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_21.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_22.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_23.png" class="edit_profile_img" />
+              <img src="./assets/icons/mood_24.png" class="edit_profile_img" />
+            </div>
+          </div>
+          <div class="inputs_container">
+            <input
+              type="text"
+              id="username_field"
+              class="inputs"
+              maxlength="16"
+              placeholder="Username"
+            />
+            <input
+              type="text"
+              id="location_field"
+              class="inputs"
+              placeholder="Location"
+            />
+            <input
+              type="text"
+              id="face_field"
+              class="inputs"
+              placeholder="Facebook"
+            />
+            <input
+              type="text"
+              id="insta_field"
+              class="inputs"
+              placeholder="Instagram"
+            />
+            <input
+              type="text"
+              id="twit_field"
+              class="inputs"
+              placeholder="Twitter"
+            />
+            <input
+              type="text"
+              id="web_field"
+              class="inputs"
+              placeholder="Website"
+            />
+            <h3 id="bio_count" class="bio_count">0/32</h3>
+            <textarea
+              type="text"
+              id="bio_field"
+              class="inputs"
+              rows="3"
+              placeholder="Bio"
+              maxlength="32"
+            ></textarea>
+            <a href="#"
+              ><button id="save_btn" class="popup_buttons">Save</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup_profile" class="overlay">
+      <div class="popup">
+          <img src="./assets/icons/circle.png" id="profile_img">
+        <a class="close" href="#">&times;</a>
+        <div class="details">
+          <h2 id="profile_name"></h2>
+          <h3 class="profile_location" id="profile_location"></h2>
+          <h3 class="profile_bio" id="profile_bio"></h3>
+          <hr>
+          <ul>
+            <li><a target="_blank" id="profile_face">
+              <img src="./assets/facebook.png" /></a></li>
+            <li><a target="_blank" id="profile_insta">
+              <img src="./assets/instagram.png" /></a></li>
+            <li><a target="_blank" id="profile_twit">
+              <img src="./assets/twitter.png" /></a></li>
+            <li><a target="_blank" id="profile_web">
+              <img src="./assets/web.png"></a></li>
+          </ul> 
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/stream.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/wave.js"></script>
+    <script src="./js/noise.js"></script>
+    <script src="./js/pay.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

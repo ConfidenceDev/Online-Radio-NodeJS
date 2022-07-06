@@ -1,0 +1,6 @@
+POST http://localhost:5050/validate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicGFzc3dvcmQiOiJwYXN3d29yZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYyMDIxNDM1NiwiZXhwIjoxNjIwMjE3MzU2fQ.0_xnUvIC6t3e-bQ_0U6_2s028JFODElDqBeBN3g5qoA
+
+{
+    "password": "password"
+}
